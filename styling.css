@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
 
 :root{
-  --accent-color: rgb(35, 91, 194);
-  --base-color: #ffffff;
-  --text-color: black;
-  --input-color: #f5f5f5;
+  --text-color:#1a1c20;
+  --link-color:#4a76ee;
+  --background-color:#eeeff1;
 }
 
 *{
   margin:0;
   padding: 0%;
+  box-sizing: border-box;
 }
 
 html{
@@ -17,131 +17,198 @@ html{
   font-size: 12px;
   color: var(--text-color);
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 body{
-  min-height: 100vh;
-  background-image: url(./images/background-image.jpg);
-  background-size: cover;
-  background-position: right;
-  overflow: hidden;
-}
-
-.wrapper{
-  box-sizing: border-box;
-  background-color: var(--base-color);
-  height: 100vh;
-  width: max(40%, 500px);
-  padding: 10px;
-  border-radius: 0 20px 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h1{
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-form{
-  width:min(400px, 100%);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:10px;
-}
-
-form > div{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-form label{
-  flex-shrink: 0;
-  height: 50px;
-  height: 50px;;
-  background-color: var(--accent-color);
-  fill: var(--base-color);
-  color: var(--base-color);
-  border-radius: 10px 0 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-form input{
-  box-sizing:border-box;
-  flex-grow: 1;
-  min-width: 0;
-  height: 50px;
-  padding: 1em;
-  font: inherit;
-  border-radius: 0 10px 10px 0;
-  border: 2px solid var(--accent-color);
-  border-left: none;
-  background-color: var(--input-color);
-  transition: 150ms ease;
-}
-form input:hover{
-  border-color: var(--accent-color);
-}
-form input:focus{
-  outline: none;
-  border-color: var(--text-color);
-}
-div:has(input:focus) > label{
-  background-color: var(--text-color);
-}
-form input::placeholder{
-  color: var(--accent-color);
-}
-form button{
-  margin-top: 10px;
-  border:none;
-  border-radius: 1000px;
-  padding: .85em 4em;
-  background-color: var(--accent-color);
-  color: var(--base-color);
-  font:inherit;
-  font-weight: 600;
-  text-transform:uppercase;
-  cursor: pointer;
-  transition: 150ms ease;
-}
-form button:hover{
-  background-color: var(--text-color);
-}
-form button:focus{
-  outline: none;
-  background-color: var(--text-color);
+  font-family: 'Asimovian', sans-serif;
+  background-color: var(--background-color);
 }
 
 a{
+  color:var(--link-color);
   text-decoration: none;
-  color: var(--accent-color);
-}
-a:hover{
-  text-decoration: underline;
 }
 
-@media (max-width: 1100px){
-  .wrapper{
-    width: min(600px, 100%);
-    border-radius: 0;
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+  align-items: center;
+}
+
+nav .left a{
+  color:var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .right a{
+  color:var(--text-color);
+  margin: 0 10px;
+}
+
+nav .right a:last-child{
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding:5px 15px;
+  border-radius: 5px;
+}
+
+nav .right a span{
+  margin-left: 5px;
+}
+
+/* Section 1 */
+.hero-section{
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  gap: 40px;
+}
+
+.hero-section .text{
+  flex:5;
+}
+
+.hero-section .text h2{
+  font-size: 45px;;
+}
+
+.hero-section .text .links{
+  margin-top: 25px;
+}
+
+.hero-section .text .links a{
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .1s;
+}
+
+.hero-section .text .links a:hover{
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.hero-section .headshot{
+  flex:2;
+  display: flex;
+  justify-content: right;
+}
+
+.hero-section .headshot img{
+  border-radius: 50%;
+  width: 200px;
+}
+
+/* Section 2 */
+.skills-section{
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.skills-section h2{
+  font-size: 35px;
+  text-align: center;
+}
+
+.skills-section .text{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-section .cells{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.skills-section .cells .cell img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span{
+  font-size: 18px;;
+}
+
+@media(max-width:850px){
+  /*SECTION 1*/
+  .hero-section h2{
+    font-size: 35px;
   }
 }
 
-.incorrect label{
-  background-color: red;
+@media(max-width:740px){
+  /*SECTION 1*/
+  .hero-section{
+    flex-direction: column-reverse;
+  }
+
+  .hero-section .headshot img{
+    width: 300px;
+  }
 }
-form div.incorrect input{
-  border-color: red;
+
+@media (max-width:600px){
+  /*NAVBAR*/
+  nav{
+    padding: 0px 20px;
+  }
+
+  nav .right a{
+    font-size: 22px;
+  }
+
+  nav .right a:last-child{
+    color : var(--text-color);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  nav .right a span{
+    display: none;
+  }
+
+  /*SECTION 1*/
+  .hero-section{
+    padding: 0 20px;
+  }
+
+  .hero-section .text h2{
+    font-size: 30px;
+  }
+
+  /*SECTION 2*/
+  .skills-section{
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell span{
+    font-size: 16px;
+  }
 }

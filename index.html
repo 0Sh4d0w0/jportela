@@ -1,38 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <link href="styling.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Portela's Portfolio</title>
   </head>
   <body>
-    <h1>João Portela</h1>
-    <img src="./images/fotoPerfil.jpg" alt="João Portela" />
-    <h2>ABOUT ME:</h2>
-    <p>
-      I am a final-year student pursuing a bachelor’s degree in computer engineering. As I have not gained professional experience yet, I am eager to secure a role where I can apply and expand my academic knowledge in a practical, real-world setting. I am highly motivated, adaptable, and committed to learning new technologies and tackling challenges to contribute meaningfully to innovative projects.
-    </p>
-    <h2>SKILLS:</h2>
-    <p> 
-      Programming Languages: Python, C/C++, JavaScript, HTML/CSS <br />
-      Frameworks and Libraries: React, Node.js<br />
-      Databases: MySQL<br />
-      Tools and Platforms: Git<br />
-      Other Skills: Problem-solving, teamwork, effective communication
-    </p>
-    <h2>PROJECTS:</h2>
-    <ul>
-      <li>
-        <strong>Personal Portfolio Website</strong> - Developed a responsive portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.
-      </li>
-      <li>
-        <strong>Chat Application</strong> - Created a real-time chat application using Node.js and Socket.io, enabling users to communicate instantly.
-      </li>
-      <li>
-        <strong>Data Analysis Tool</strong> - Built a Python-based tool for analyzing and visualizing datasets, utilizing libraries such as Pandas and Matplotlib.
-      </li>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="left">
+        <a href="/">João Portela</a>
+      </div>
+      <div class="right">
+        <a href="https://https://github.com/0Sh4d0w0" target="_blank" rel= "noopener noreferrer"> 
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/jportela02" target="_blank" rel= "noopener noreferrer"> 
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>      
+      
+        <a href="mailto:joaoantonioportela2002@gmail.com"> 
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <section class="hero-section">
+        <div class ="text">
+          <h2>ABOUT ME: </h2>
+          <p>I am a final-year student pursuing a bachelor s degree in computer engineering. As I have not gained professional experience yet, I am eager to secure a role where I can apply and expand my academic knowledge in a practical, real-world setting. I am highly motivated, adaptable, and committed to learning new technologies and tackling challenges to contribute meaningfully to innovative projects.</p>
+          
+          <div class="links">
+            <a href="#skills">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Skills</span>
+            </a>
+            <a href="#projects">
+              <i class="fa-solid fa-box-archive"></i>
+              <span>Projects</span>
+            </a>
+            <a href="#contact">
+              <i class="fa-solid fa-user"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+        <div class="headshot">
+          <img src="./images/fotoPerfil.webp" alt="João Portela" />
+        </div>
+        
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2>SKILLS:</h2>
+        <div class="text">
+          Skills I have acquired throughout my academic journey and personal projects.
+        </div>
+
+        <div class="cells">
+          <div class="cell">
+            <img src ="images/c-logo.webp" alt="C Language" />
+            <span>C/C++</span>
+          </div>
+
+          <div class="cell">
+            <img src ="images/css-logo.webp" alt="CSS Language" />
+            <span>CSS</span>
+          </div>
+
+          <div class="cell">
+            <img src ="images/python-logo.webp" alt="Python Language" />
+            <span>Python</span>
+          </div>
+
+          <div class="cell">
+            <img src ="images/html-logo.webp" alt="HTML Language" />
+            <span>HTML</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>PROJECTS:</h2>
+        <div class="project-cards">
+          <div class="project-card">
+            <img src="images/project1.webp" alt="Project 1" />
+            <h3>Project Title 1</h3>
+            <p>Brief description of Project 1.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <img src="images/project2.webp" alt="Project 2" />
+            <h3>Project Title 2</h3>
+            <p>Brief description of Project 2.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <img src="images/project3.webp" alt="Project 3" />
+            <h3>Project Title 3</h3>
+            <p>Brief description of Project 3.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+      </section>
+      <section id="contact"></section>
+
+    </main>
   </body>
 </html>
