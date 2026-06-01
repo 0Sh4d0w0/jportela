@@ -1,170 +1,680 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <link href="styling.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Portela's Portfolio</title>
-  </head>
-  <body>
-    <!-- SIDEBAR -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/fotoPerfil.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
     <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-            <figure class="avatar-box">
-                <img src="./images/fotoPerfil.png" alt="Joao Portela" width="80">
-            </figure>
-            <div class="info-content">
-                <h1 class="name" title="Joao Portela">Joao Portela</h1>
-                <p class="title">Computer Engineer</p>
-            </div>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./images/fotoPerfil.png" alt="JPortela" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Joao Portela">Joao Portela</h1>
+
+          <p class="title">Computer Engineer</p>
         </div>
+
         <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-            <ion-icon name="chevron-down"></ion-icon>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
         </button>
-        <div class="sidebar-info_more">
-            <div class="separator"></div>
-            <ul class="contacts-list">
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="mail-outline"></ion-icon>
-                    </div>
-                    <div class="contact-info">
-                        <p class="contact-title">Email</p>
-                        <a href="mailto:joaoantonioportela2002@gmail.com" class="contact-link">joaoantonioportela2002@gmail.com</a>
-                    </div>
-                </li>
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="phone-portrait-outline"></ion-icon>
-                    </div>
-                    <div class="contact-info">
-                        <p class="contact-title">Phone</p>
-                        <a href="tel:+351962511384" class="contact-link">+351 962 511 384</a>
-                    </div>
-                </li>
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                    </div>
-                    <div class="contact-info">
-                        <p class="contact-title">Birthday</p>
-                        <time datetime="2002-06-07">June 07, 2002</time>
-                    </div>
-                </li>
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="location-outline"></ion-icon>
-                    </div>
-                    <div class="contact-info">
-                        <p class="contact-title">Location</p>
-                        <address>Ponte de Lima, Viana do Castelo, Portugal</address>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:joaoantonioportela2002@gmail.com" class="contact-link">joaoantonioportela2002@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+356 962511384" class="contact-link">+356 962511384</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2002-06-07">June 7, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Ponte de Lima, Viana do Castelo, Portugal</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+      </div>
+
     </aside>
 
-    <!-- NAVBAR -->
-    <nav>
-      <div class="right">
-        <a href="https://https://github.com/0Sh4d0w0" target="_blank" rel= "noopener noreferrer"> 
-          <i class="fa-brands fa-github"></i>
-          <span>GitHub</span>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/jportela02" target="_blank" rel= "noopener noreferrer"> 
-          <i class="fa-brands fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>      
-      </div>
-    </nav>
 
-    <main>
-      <section class="hero-section">
-        <div class ="text">
-          <h2>ABOUT ME: </h2>
-          <p>I am a final-year student pursuing a bachelor s degree in computer engineering. As I have not gained professional experience yet, I am eager to secure a role where I can apply and expand my academic knowledge in a practical, real-world setting. I am highly motivated, adaptable, and committed to learning new technologies and tackling challenges to contribute meaningfully to innovative projects.</p>
-          
-          <div class="links">
-            <a href="#skills">
-              <i class="fa-solid fa-terminal"></i>
-              <span>Skills</span>
-            </a>
-            <a href="#projects">
-              <i class="fa-solid fa-box-archive"></i>
-              <span>Projects</span>
-            </a>
-            <a href="#contact">
-              <i class="fa-solid fa-user"></i>
-              <span>Contact</span>
-            </a>
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          </p>
+
+          <p>
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title"></h4>
+
+                <p class="service-item-text">
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
           </div>
-        </div>
-        <div class="headshot">
-          <img src="./images/fotoPerfil.webp" alt="João Portela" />
-        </div>
-        
-      </section>
 
-      <section id="skills" class="skills-section">
-        <h2>SKILLS:</h2>
-        <div class="text">
-          Skills I have acquired throughout my academic journey and personal projects.
-        </div>
+          <ol class="timeline-list">
 
-        <div class="cells">
-          <div class="cell">
-            <img src ="images/c-logo.webp" alt="C Language" />
-            <span>C/C++</span>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">UTAD</h4>
+
+              <span>2020 — 2026</span>
+
+              <p class="timeline-text">
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
           </div>
 
-          <div class="cell">
-            <img src ="images/css-logo.webp" alt="CSS Language" />
-            <span>CSS</span>
-          </div>
+          <ol class="timeline-list">
 
-          <div class="cell">
-            <img src ="images/python-logo.webp" alt="Python Language" />
-            <span>Python</span>
-          </div>
+            <li class="timeline-item">
 
-          <div class="cell">
-            <img src ="images/html-logo.webp" alt="HTML Language" />
-            <span>HTML</span>
-          </div>
-        </div>
-      </section>
+              <h4 class="h4 timeline-item-title">Operador Fabrica</h4>
 
-      <section id="projects">
-        <h2>PROJECTS:</h2>
-        <div class="project-cards">
-          <div class="project-card">
-            <h3>Sorting Alghorithms race</h3>
-            <p>Implementation of different sorting algorithms to understand how they work and compare their speed.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+              <span>07/2021 — 08/2021</span>
 
-          <div class="project-card">
-            <h3>Python To do List</h3>
-            <p>To do list in Python with text file usage</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+              <p class="timeline-text">
+              </p>
 
-          <div class="project-card">
-            <h3>Binary trees tournament</h3>
-            <p>Simulation of a tournament using binary trees un C++</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-          <div>
-            <h3>Virus simulation with NetLogo</h3>
-            <p>Simulation of a virus using NetLogo</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-      </section>
-      <section id="contact"></section>
-    </main>
-  </body>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Operador Linha de Forno</h4>
+
+              <span>07/2023 — 09/2023</span>
+
+              <p class="timeline-text">
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C++</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML/CSS/JS</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn></button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn></button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn></button>
+            </li>
+
+          </ul>
+
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title"></h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
