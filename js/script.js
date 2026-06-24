@@ -1,151 +1,157 @@
 'use strict';
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+// ============================================================
+//  SECTION 1 — SIDEBAR (Show / Hide Contact Info)
+// ============================================================
+const sidebar = document.querySelector('[data-sidebar]');
+// Same idea — finds the <button> that has the attribute "data-sidebar-btn".
+const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+// addEventListener() watches an element for a specific event.
+sidebarBtn.addEventListener('click', function () {
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+  sidebar.classList.toggle('active');
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+});
 
 
+// ============================================================
+//  SECTION 2 — NAVIGATION (Switch Between Pages)
+// ============================================================
 
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-select-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+const navLinks = document.querySelectorAll('[data-nav-link]');
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+const pages = document.querySelectorAll('[data-page]');
 
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+navLinks.forEach(function (link) {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
+  link.addEventListener('click', function () {
 
-  });
-}
+    // .textContent reads the visible text inside an element.
+    // So "About" becomes "about", "Resume" becomes "resume", etc.
+    // We need this because the data-page values are all lowercase:
+    //   data-page="about", data-page="resume", etc.
+    const clickedPage = link.textContent.toLowerCase();
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+    // --- Update which NAV BUTTON looks active ---
 
-const filterFunc = function (selectedValue) {
+    // First, remove 'active' from ALL nav buttons
+    navLinks.forEach(function (navLink) {
+      navLink.classList.remove('active');
+    });
 
-  for (let i = 0; i < filterItems.length; i++) {
+    // Then add 'active' only to the one that was just clicked.
+    // 'link' here refers to the button that triggered the click event.
+    link.classList.add('active');
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
+    // --- Update which PAGE SECTION is visible ---
 
-  }
+    pages.forEach(function (page) {
 
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+      if (page.dataset.page === clickedPage) {
+        // This is the page the user wants to see — show it.
+        page.classList.add('active');
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        // All other pages — hide them.
+        page.classList.remove('active');
       }
+
+    });
+
+  });
+
+});
+
+
+// ============================================================
+//  SECTION 3 — PORTFOLIO FILTER
+// ============================================================
+
+// Get all the category filter buttons (All, Web Design, etc.)
+const filterBtns = document.querySelectorAll('[data-filter-btn]');
+
+// Get all the individual project cards in the portfolio grid.
+// Each <li> has a data-category="..." attribute, e.g. data-category="web design"
+const filterItems = document.querySelectorAll('[data-filter-item]');
+
+// This variable keeps track of which filter is currently chosen.
+// Starts with 'all' so every project is visible when the page loads.
+let selectedFilter = 'all';
+
+filterBtns.forEach(function (btn) {
+
+  btn.addEventListener('click', function () {
+
+    // Read the text of the clicked filter button and lowercase it.
+    selectedFilter = btn.textContent.toLowerCase();
+
+    // --- Update which FILTER BUTTON looks selected ---
+    filterBtns.forEach(function (b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+
+    // --- Show or hide each PROJECT CARD ---
+    filterItems.forEach(function (item) {
+
+      // Read the data-category="..." attribute from the project card.
+      const itemCategory = item.dataset.category.toLowerCase();
+
+      // Show the card if:
+      //   1. The user chose "All" (selectedFilter === 'all'), OR
+      //   2. The card's category matches the selected filter.
+      // The || operator means OR — the condition is true if EITHER side is true.
+      if (selectedFilter === 'all' || itemCategory === selectedFilter) {
+        item.classList.add('active');    // visible
+      } else {
+        item.classList.remove('active'); // hidden
+      }
+
+    });
+
+  });
+
+});
+
+
+// ============================================================
+//  SECTION 4 — CONTACT FORM VALIDATION
+// ============================================================
+
+// Get the <form> element.
+const form = document.querySelector('[data-form]');
+
+// Get all three input fields: Full name, Email, and Message textarea.
+const formInputs = document.querySelectorAll('[data-form-input]');
+
+// Get the Send Message button.
+// It starts with the HTML attribute disabled, so it can't be clicked yet.
+const formBtn = document.querySelector('[data-form-btn]');
+
+// We want to enable the button only when the user has filled in all fields.
+// We listen to the 'input' event on each field — this fires every single time
+// the user types a character, pastes text, or clears a field.
+formInputs.forEach(function (input) {
+
+  input.addEventListener('input', function () {
+
+    // Checks ALL fields with the "required" attribute inside the form
+    // and returns true if they are all valid, or false if any are empty/invalid.
+    if (form.checkValidity()) {
+
+      // All fields are filled in — activate the button.
+      // removeAttribute('disabled') removes the HTML attribute that was blocking clicks.
+      formBtn.removeAttribute('disabled');
+
+    } else {
+
+      // Something is still missing or invalid — keep the button disabled.
+      // setAttribute(name, value) adds or updates an HTML attribute.
+      // The empty string '' is the conventional value for boolean HTML attributes like disabled.
+      formBtn.setAttribute('disabled', '');
+
     }
 
   });
-}
+
+});
