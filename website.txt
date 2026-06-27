@@ -1,1 +1,29 @@
-https://0sh4d0w0.github.io/jportela/
+Sou um estudante do último ano, a frequentar um curso de licenciatura em Engenharia Informática. Tenho disponibilidade imediata para começar um novo desafio. Como ainda não adquiri experiência profissional, estou entusiasmado por assegurar uma posição onde possa aplicar e ampliar os meus conhecimentos académicos num contexto prático e real. Sou altamente motivado, adaptável e dedicado a aprender novas tecnologias e a enfrentar desafios para contribuir de forma significativa para projetos inovadores.
+
+Licenciatura em Engenharia Informática
+Universidade de Trás-os-Montes e Alto Douro
+
+• Trabalhei com C, C++, C#, Python, Microsoft PowerBI, Cisco Packet Tracer, NetLogo e .NET
+• Projeto Final concluído - Algoritmos Genéticos em Python: desenvolvi algoritmos para resolver problemas de otimização, utilizando princípios de seleção natural para evoluir soluções. 
+• Simulação de Vírus em NetLogo: Concebi e implementei uma simulação que modela a propagação de um vírus numa população. 
+• Falta concluir apenas uma unidade curricular, Redes II, que realizarei este ano letivo por exame.
+
+Trabalho:
+>Operador Fábrica (BorgWarner)
+Jul 21 – Ago 21
+Trabalhei na linha de montagem de peças de automóveis.
+
+>Linha de Forno (BorgWarner)
+Jul 23 – Sep 23
+Responsável pela entrada e saída de peças automóveis no forno
+
+Projetos:
+Aplicação de Lista de Tarefas em Python: 
+Desenvolvi uma aplicação funcional de gestão de tarefas com o objetivo de aprender manipulação de ficheiros em Python. 
+Link: https://github.com/0Sh4d0w0/ToDoList
+Jogo 2D em Java (Em Desenvolvimento): 
+Atualmente a desenvolver um jogo 2D em Java, implementando mecânicas centrais do jogo para aprender os fundamentos de desenvolvimento de jogos e compreender os conceitos básicos de Java.
+Simulação de Torneio com Árvores B em C++: 
+Construí um sistema de gestão de torneios utilizando estruturas de dados de árvores B para organizar e recuperar dados de partidas de forma eficiente.
+ Link: https://github.com/0Sh4d0w0/TorneioTenis
+
