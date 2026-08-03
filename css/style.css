@@ -1007,7 +1007,29 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-des{
+    color:var(--light-gray-70);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.5;
+    margin: 6px 10px 10px;
+}
 
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.project-tag {
+    background: var(--jet);
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-400);
+    padding: 3px 10px;
+    border-radius: 8px;
+}
 
 
 
